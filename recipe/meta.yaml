@@ -1,22 +1,22 @@
 {% set name = "gooey" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.3.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Gooey-{{ version }}.tar.gz  # NB: uppercase G in tarball filename
-  sha256: bb043d760146d548178a1a9360f64d5db33c7dd9707dc898d9ed50ef72536507
+  sha256: 250169130c83b3ca8bbd12b2e77baaa9bd8766d3f01e65df814105187f5f3d6b
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}    
+    - {{ compiler('cxx') }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
