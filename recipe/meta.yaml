@@ -28,12 +28,14 @@ requirements:
     - xorg-libxfixes  # [linux]
     - pillow >=4.3.0
     - psutil >=5.4.2
-    - wxpython >=4.0.0b1
+    - colored >=1.3.93
+    - wxpython >=4.0.7
   run:
     - pillow >=4.3.0
     - psutil >=5.4.2
+    - colored >=1.3.93
     - python
-    - wxpython >=4.0.0b1
+    - wxpython ==4.0.7
 
 test:
   imports:
