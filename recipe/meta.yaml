@@ -1,5 +1,5 @@
 {% set name = "gooey" %}
-{% set version = "1.0.4.0.0.0" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Gooey-{{ version }}.tar.gz  # NB: uppercase G in tarball filename
-  sha256: ca6d8601454356cb4491c5800b4f56131f150b162790415f3137a842bb4b8b21
+  sha256: 688fed6c1955add30331b01b3b9662f6546aa5957f9d5814c00a3a9b8abbd0da
 
 build:
   number: 0
