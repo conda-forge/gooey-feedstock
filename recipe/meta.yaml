@@ -10,7 +10,7 @@ source:
   sha256: ca6d8601454356cb4491c5800b4f56131f150b162790415f3137a842bb4b8b21
 
 build:
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   skip: true  # [osx and py<37]
 
@@ -68,3 +68,5 @@ about:
 extra:
   recipe-maintainers:
     - jfcorbett
+    - casperdcl
+    - chriskiehl
