@@ -1,7 +1,7 @@
 About gooey
 ===========
 
-Home: http://pypi.python.org/pypi/Gooey/
+Home: http://pypi.python.org/pypi/Gooey
 
 Package license: MIT
 
