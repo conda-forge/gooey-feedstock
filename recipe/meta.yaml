@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [osx and py<37]
 
 requirements:
@@ -30,13 +30,15 @@ requirements:
     - pillow >=4.3.0
     - psutil >=5.4.2
     - colored >=1.3.93
-    - wxpython ==4.0.7.post2
+    - pygtrie >=2.3.3
+    - wxpython >=4.1.0,<4.2
   run:
+    - python
     - pillow >=4.3.0
     - psutil >=5.4.2
     - colored >=1.3.93
-    - python
-    - wxpython ==4.0.7.post2
+    - pygtrie >=2.3.3
+    - wxpython >=4.1.0,<4.2
 
 test:
   imports:
@@ -57,7 +59,7 @@ test:
     - gooey.util
 
 about:
-  home: http://pypi.python.org/pypi/Gooey/
+  home: http://pypi.python.org/pypi/Gooey
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
