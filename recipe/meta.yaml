@@ -1,5 +1,5 @@
 {% set name = "gooey" %}
-{% set version = "1.0.4.0.0.0" %}
+{% set version = "1.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Gooey-{{ version }}.tar.gz  # NB: uppercase G in tarball filename
-  sha256: ca6d8601454356cb4491c5800b4f56131f150b162790415f3137a842bb4b8b21
+  sha256: 89791a0d0c9d265d96dd48babee8eb0d0d5912b44e984a44c5f7574657dff7aa
 
 build:
-  number: 1
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  skip_compile_pyc:
+    - "*/examples/*.py"
   skip: true  # [osx and py<37]
 
 requirements:
@@ -30,13 +32,15 @@ requirements:
     - pillow >=4.3.0
     - psutil >=5.4.2
     - colored >=1.3.93
-    - wxpython ==4.0.7.post2
+    - pygtrie >=2.3.3
+    - wxpython >=4.1.0,<4.2
   run:
+    - python
     - pillow >=4.3.0
     - psutil >=5.4.2
     - colored >=1.3.93
-    - python
-    - wxpython ==4.0.7.post2
+    - pygtrie >=2.3.3
+    - wxpython >=4.1.0,<4.2
 
 test:
   imports:
@@ -57,7 +61,7 @@ test:
     - gooey.util
 
 about:
-  home: http://pypi.python.org/pypi/Gooey/
+  home: http://pypi.python.org/pypi/Gooey
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
