@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  skip_compile_pyc:
+    - "*/examples/*.py"
   skip: true  # [osx and py<37]
 
 requirements:
