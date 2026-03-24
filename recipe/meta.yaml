@@ -14,7 +14,6 @@ build:
   noarch: python
   number: 2
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
-  skip: true  # [py<python_min]
 
 requirements:
   host:
