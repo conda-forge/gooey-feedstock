@@ -1,6 +1,6 @@
 {% set name = "gooey" %}
 {% set version = "1.0.8.1" %}
-{% set python_min = "3.11" %}
+{% set python_min = "3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - setuptools
     - setuptools-git-versioning >=2.0
     - pip
