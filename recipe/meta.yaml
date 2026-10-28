@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Gooey-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Gooey-{{ version }}.tar.gz # NB: uppercase G in tarball filename
   sha256: e0f53ad6a4aa86962288af8d6c0165ccad74cb514ed24248d0df097efbfce1d8
 
 build:
