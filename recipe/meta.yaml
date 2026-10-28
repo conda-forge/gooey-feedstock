@@ -1,6 +1,5 @@
 {% set name = "gooey" %}
 {% set version = "1.0.8.2" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
