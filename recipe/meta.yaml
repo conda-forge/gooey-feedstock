@@ -1,18 +1,17 @@
 {% set name = "gooey" %}
-{% set version = "1.0.8.1" %}
-{% set python_min = "3.10" %}
+{% set version = "1.0.8.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Gooey-{{ version }}.tar.gz  # NB: uppercase G in tarball filename
-  sha256: 08d6bf534f4d50d50dafba5cfc68dcf31a6e9eeef13a94cbe3ea17c4e45c4671
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e0f53ad6a4aa86962288af8d6c0165ccad74cb514ed24248d0df097efbfce1d8
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -25,7 +24,7 @@ requirements:
     - python >={{ python_min }}
     - pillow >=4.3.0
     - psutil >=5.4.2
-    - colored >=1.3.93
+    - colored >=1.3.93,<2
     - pygtrie >=2.3.3
     - wxpython >=4.1.0
 
